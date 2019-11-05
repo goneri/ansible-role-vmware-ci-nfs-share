@@ -27,11 +27,3 @@
   become: True
   notify:
       - Restart nfs-server
- 
-handlers:
-- name: Restart nfs-server
-  systemd:
-    state: restarted
-    enabled: True
-    name: nfs-server
-  become: True
